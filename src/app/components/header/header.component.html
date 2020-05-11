@@ -1,0 +1,8 @@
+<mat-toolbar color="primary" class="header">
+    <span routerLink="/" routerLinkActive="active" class="pointer">Gestmazon</span>
+    <span class="space-middle"></span>
+    <p class="numberProductBasket" *ngIf="(numberProductBasket$ | async) > 0">{{(numberProductBasket$ | async)}}</p>
+    <span class="material-icons pointer" routerLink="/basket" routerLinkActive="active">
+        shopping_cart
+    </span>
+</mat-toolbar>

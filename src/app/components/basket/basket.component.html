@@ -1,0 +1,22 @@
+<div class="basket-container">
+    <h1>Panier</h1>
+    <mat-list *ngIf="!productBasketListIsEmpty">
+        <div *ngFor="let productBasket of (productBasketList$ | async)">
+            <mat-list-item class="product-item">
+                <div class="product-basket">
+                    <p>Nom : {{productBasket.getName()}}</p>
+                    <p>Description : {{productBasket.getShortDetail()}}</p>
+                    <p>Prix : {{productBasket.getPrice()}} €</p>
+                    <p>Nombre : {{productBasket.getNumberProduct()}}</p>
+                    <button mat-raised-button color="primary" (click)="removeProduct(productBasket)" class="button-remove-product">Supprimer un élément</button>
+                </div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+        </div>
+        <div class="info-value">
+            <h2>Total : {{valueProductBasketList}} €</h2>
+            <button mat-raised-button color="primary" (click)="buyBasket()">Acheter</button>
+        </div>
+    </mat-list>
+    <p *ngIf="productBasketListIsEmpty">Panier Vide</p>
+</div>

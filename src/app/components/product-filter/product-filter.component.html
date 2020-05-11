@@ -1,0 +1,9 @@
+<form [formGroup]="myForm" class="form">
+    <mat-form-field>
+        <mat-label>Catégorie</mat-label>
+        <mat-select matNativeControl required formControlName="categories">
+            <mat-option value="all">Toutes</mat-option>
+            <mat-option *ngFor="let categorie of categorieList" value="{{categorie.name}}">{{categorie.name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</form>

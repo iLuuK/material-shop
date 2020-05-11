@@ -1,0 +1,23 @@
+<div class="product-container product-container" *ngIf="(productList$ | async) as productList">
+    <mat-card class="card" *ngFor="let product of productList">
+        <mat-card-header>
+            <mat-card-title>{{product.getName()}}</mat-card-title>
+            <mat-card-subtitle>{{product.getType()}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="'../../../assets/img/'+product.getType()+'s/'+product.getLinkImage()+'.jpg'">
+        <mat-card-content>
+            <p>
+                {{product.getShortDetail()}}
+            </p>
+            <p class="prix">
+                {{product.getPrice()}} €
+            </p>
+            <p *ngIf="!checkCanBuy(product)" class="stock">(Plus disponible)</p>
+            <p *ngIf="checkCanBuy(product)" class="stock">({{product.getStock()}} disponible-s)</p>
+        </mat-card-content>
+        <mat-card-actions class="list-button-card">
+            <button mat-raised-button (click)="openDialogDetailProduct(product)">Détails</button>
+            <button mat-raised-button color="primary" (click)="addBasket(product)" [disabled]="!checkCanBuy(product)">Acheter</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

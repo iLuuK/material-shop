@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>{{product.getName()}} ({{product.getType()}}) - {{product.getPrice()}} €</h1>
+<div mat-dialog-content class="dialog-content">
+    <img [src]="'../../../assets/img/'+product.getType()+'s/'+product.getLinkImage()+'.jpg'">
+    <p>{{product.getLongDetail()}}</p>
+    <div mat-dialog-actions>
+        <button mat-raised-button (click)="onNoClick()">Fermer</button>
+        <button mat-raised-button (click)="addBasket()" [disabled]="!checkCanBuy(product)" color="primary">Acheter</button>
+    </div>
