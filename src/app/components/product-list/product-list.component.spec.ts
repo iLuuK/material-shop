@@ -11,8 +11,6 @@ import { ApiService } from '../../services/api.service';
 import { Product } from 'src/app/class/product';
 
 describe('ProductListComponent', () => {
-  // let component: ProductListComponent;
-  // let fixture: ComponentFixture<ProductListComponent>;
 
   const spyApiService = jasmine.createSpyObj('spyApiService', ['getProductList']);
   const mockProduct: Product = new Product({ name: 'name', type: 'type', longDetail: 'longDetail', shortDetail: 'shortDetail', stock: 3, price: 1, linkImage: 'linkImage', id: 1 });
