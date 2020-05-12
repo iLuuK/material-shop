@@ -10,47 +10,53 @@ describe('Product', () => {
 
   it('return name of product', () => {
     expect(product.getName()).toEqual('name');
-});
+  });
 
-it('return type of product', () => {
+  it('return type of product', () => {
     expect(product.getType()).toEqual('type');
-});
+  });
 
-it('return long detail of product', () => {
+  it('return long detail of product', () => {
     expect(product.getLongDetail()).toEqual('longDetail');
-});
+  });
 
-it('return short detail of product', () => {
+  it('return short detail of product', () => {
     expect(product.getShortDetail()).toEqual('shortDetail');
-});
+  });
 
-it('return stock of product', () => {
+  it('return stock of product', () => {
     expect(product.getStock()).toEqual(3);
-});
+  });
 
-it('return price of product', () => {
+  it('return price of product', () => {
     expect(product.getPrice()).toEqual(1);
-});
+  });
 
-it('return link image of product', () => {
+  it('return link image of product', () => {
     expect(product.getLinkImage()).toEqual("linkImage");
-});
+  });
 
-it('return id of product', () => {
+  it('return id of product', () => {
     expect(product.getId()).toEqual(1);
-});
+  });
 
-it('return good stock after remove one of stock', () => {
-  product.removeOneStock();
-  expect(product.getStock()).toEqual(2);
-});
+  it('return good stock after remove one of stock', () => {
+    product.removeOneStock();
+    expect(product.getStock()).toEqual(2);
+  });
 
-it('return good stock after remove one of stock after stock to equal 0', () => {
-  product.removeOneStock();
-  product.removeOneStock();
-  product.removeOneStock();
-  product.removeOneStock();
-  expect(product.getStock()).toEqual(0);
-});
+  it('return good stock after remove one of stock after stock to equal 0', () => {
+    product.removeOneStock();
+    product.removeOneStock();
+    product.removeOneStock();
+    product.removeOneStock();
+    expect(product.getStock()).toEqual(0);
+  });
+
+  it('return good stock afer add one on stock', () => {
+    product.addOneStock()
+    expect(product.getStock()).toEqual(1);
+  });
+
 
 });
