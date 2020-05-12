@@ -1,0 +1,111 @@
+[{
+        "name": "Banane",
+        "type": "fruit",
+        "longDetail": "La banane est le fruit ou la baie dérivant de l’inflorescence du bananier. Les bananes sont des fruits très généralement stériles issus de variétés domestiquées. Seuls les fruits des bananiers sauvages et de quelques cultivars domestiques contiennent des graines.",
+        "shortDetail": "Un fruit jaune.",
+        "stock": 0,
+        "price": 1,
+        "linkImage": "banane",
+        "id": 1
+    },
+    {
+        "name": "Cerise",
+        "type": "fruit",
+        "longDetail": "La cerise est le fruit comestible du cerisier. Il s'agit d'une drupe (fruit charnu à noyau), de forme sphérique, de couleur généralement rouge plus ou moins foncé jusque noire, plus rarement jaune. Ce petit fruit compte environ 50 calories pour 100 grammes. La fleur est généralement blanche.",
+        "shortDetail": "Un fruit rouge et petit.",
+        "stock": 7,
+        "price": 2,
+        "linkImage": "cerise",
+        "id": 2
+    },
+    {
+        "name": "Fraise",
+        "type": "fruit",
+        "longDetail": "La fraise est un fruit rouge issu des fraisiers, espèces de plantes herbacées appartenant au genre Fragaria (famille des Rosacées), dont plusieurs variétés sont cultivées.",
+        "shortDetail": "Un fruit rouge et petit et très bon.",
+        "stock": 3,
+        "price": 3,
+        "linkImage": "fraise",
+        "id": 3
+    },
+    {
+        "name": "Melon",
+        "type": "fruit",
+        "longDetail": "Le Melon (Cucumis melo) est une plante herbacée annuelle originaire d'Afrique intertropicale, appartenant à la famille des Cucurbitacées et largement cultivée comme plante potagère pour son faux-fruit comestible. Le terme désigne aussi le fruit climactérique lui-même très savoureux, sucré et parfumé.",
+        "shortDetail": "Juste le meilleur fruit",
+        "stock": 12,
+        "price": 1,
+        "linkImage": "melon",
+        "id": 4
+    },
+    {
+        "name": "Orange",
+        "type": "fruit",
+        "longDetail": "L’orange ou orange douce est le fruit de l’oranger (Citrus sinensis L.) de la famille des Rutacées. Comme pour tous les agrumes, il s’agit d'une forme particulière de baie appelée hespéride. Il existe plusieurs variétés d’oranges classées en quatre groupes variétaux.",
+        "shortDetail": "J'adore son odeur.",
+        "stock": 45,
+        "price": 0.5,
+        "linkImage": "orange",
+        "id": 5
+    },
+    {
+        "name": "Pomme",
+        "type": "fruit",
+        "longDetail": "La pomme est un fruit comestible à pépins d'un goût sucré et acidulé et à la propriété plus ou moins astringente selon les variétés.",
+        "shortDetail": "A ne pas confondre avec la marque américaine.",
+        "stock": 3,
+        "price": 1,
+        "linkImage": "pomme",
+        "id": 6
+    },
+    {
+        "name": "Canapé gris",
+        "type": "meuble",
+        "longDetail": "Un canapé, sofa, aussi appelé divan en Belgique et au Canada francophones, est un meuble confortable ayant plusieurs places et habituellement un dossier et un appuie-bras de chaque côté, se distinguant du divan sans dossier ni bras. Les canapés se trouvent généralement dans la salle de séjour. Ils peuvent être fabriqués avec différents textiles ou en cuir.",
+        "shortDetail": "Agréable quand tu regardes la tv surtout en gris.",
+        "stock": 4,
+        "price": 200,
+        "linkImage": "canape-gris",
+        "id": 7
+    },
+    {
+        "name": "Canapé blanc",
+        "type": "meuble",
+        "longDetail": "Un canapé, sofa, aussi appelé divan en Belgique et au Canada francophones, est un meuble confortable ayant plusieurs places et habituellement un dossier et un appuie-bras de chaque côté, se distinguant du divan sans dossier ni bras. Les canapés se trouvent généralement dans la salle de séjour. Ils peuvent être fabriqués avec différents textiles ou en cuir.",
+        "shortDetail": "Agréable quand tu regardes la tv surtout en blanc.",
+        "stock": 23,
+        "price": 76,
+        "linkImage": "canape-blanc",
+        "id": 8
+    },
+    {
+        "name": "Chaise en bois",
+        "type": "meuble",
+        "longDetail": "Une chaise est un type de siège, c'est-à-dire de meuble muni d’un dossier et destiné à ce qu’une personne s’assoie dessus. Un siège pour une personne sans dossier ni repose-bras est un tabouret ; pour plus d'une personne c'est un sofa ou un banc.",
+        "shortDetail": "En bois c'est pas confortable mais c'est mieux que le sol",
+        "stock": 67,
+        "price": 23,
+        "linkImage": "chaise-bois",
+        "id": 9
+    },
+    {
+        "name": "Meuble tv",
+        "type": "meuble",
+        "longDetail": "Comme son nom l’indique, un meuble TV, est destiné à supporter ou à abriter un poste de télévision. C’est, au minimum, une tablette ou une table composée d’un plateau horizontal prenant appui sur une base formée d’un ou plusieurs pieds ou de divers supports.",
+        "shortDetail": "Faut bien surélever sa nouvelle tv.",
+        "stock": 23,
+        "price": 46,
+        "linkImage": "meuble-tv",
+        "id": 10
+    },
+    {
+        "name": "Table en bois",
+        "type": "meuble",
+        "longDetail": "La table est un type de meuble, initialement (attesté en 1694) composé d'une surface plane et horizontale (des planches de bois assemblées) destinée à être posée sur un ou plusieurs pieds, tréteaux ou supports. Dans la culture occidentale, entre autres usages, elle peut être utilisée pour les repas.",
+        "shortDetail": "Une super table en bois",
+        "stock": 19,
+        "price": 89,
+        "linkImage": "table-bois",
+        "id": 11
+    }
+]
