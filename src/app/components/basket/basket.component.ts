@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ClientService } from 'src/app/services/client.service';
 import { Observable } from 'rxjs';
 import { BasketProduct } from 'src/app/class/basket-product';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-basket',
@@ -15,7 +16,7 @@ export class BasketComponent implements OnInit {
 
 
 
-  constructor(private clientService: ClientService) {
+  constructor(private clientService: ClientService, private apiService: ApiService) {
     this.productBasketList$ = this.clientService.getProductBasket();
 
     this.productBasketList$.subscribe(data => {
@@ -42,6 +43,7 @@ export class BasketComponent implements OnInit {
   }
   public removeProduct(product: BasketProduct){
     this.clientService.removeProductBasket(product);
+    this.apiService.productNotBuy(product);
   }
 
 }

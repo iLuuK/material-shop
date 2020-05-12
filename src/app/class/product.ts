@@ -41,4 +41,7 @@ export class Product {
     this.stock--;
     this.stock = this.stock < 0 ? 0 : this.stock;
   }
+  addOneStock(){
+    this.stock++;
+  }
 }
