@@ -9,13 +9,15 @@ import { SnackBarService } from './snack-bar.service';
 })
 export class ApiService {
   private productList: BehaviorSubject<Product[]> = new BehaviorSubject<Product[]>([]);
+  private urlApi:string = "https://iluuk.github.io/material-shop/assets/data.json";
 
   constructor(private http: HttpClient, private snackBarService: SnackBarService) {
     this.getDataFromApi();
   }
 
   public getUrlService(): string {
-    return "../../assets/data.json";
+    console.log(this.urlApi);
+    return this.urlApi;
   }
   public getDataFromApi(type: string = 'all') {
     this.http
