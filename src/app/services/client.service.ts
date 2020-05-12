@@ -13,6 +13,7 @@ export class ClientService {
 
   constructor(private snackBarService: SnackBarService) { }
 
+  // add product in basket product
   public addProductBasket(newProduct: Product) {
     const newClientBasket = this.createNewClientBasketWithAdd(
       this.clientBasket.getValue(),
@@ -22,17 +23,20 @@ export class ClientService {
     this.numberProductBasket.next(this.calculateNumberProductBasket());
     this.snackBarService.openSnackBar("Un(e) " + newProduct.getName().toLowerCase() + " est ajouté(e) au panier !");
   }
+  // create the new client basket when add a product
   private createNewClientBasketWithAdd(
     oldClientBasket: BasketProduct[],
     newProduct: Product): BasketProduct[] {
     let productFound = false;
+    // find if product exist in basket product
     oldClientBasket.find((product) => {
-      if (this.sameProduct(product,newProduct)) {
+      // if basket product exist the add prodct we just add a number of this product in basket
+      if (this.sameProduct(product, newProduct)) {
         product.addOneProduct();
-        console.log("same");
         productFound = true;
       }
     });
+    // if basket product don't exist the add product we add a new product of this
     if (productFound === false) {
       oldClientBasket.push(
         new BasketProduct(
@@ -43,7 +47,8 @@ export class ClientService {
     return oldClientBasket;
   }
 
-  private sameProduct(product:BasketProduct, newProduct:Product): boolean{
+  // check two product is equal
+  private sameProduct(product: BasketProduct, newProduct: Product): boolean {
     return product.getId() === newProduct.getId()
   }
 
@@ -55,15 +60,17 @@ export class ClientService {
     this.snackBarService.openSnackBar("Un(e) " + removeProduct.getName().toLowerCase() + " est supprimé(e) au panier !");
   }
 
+  // create the new client basket when remove a product
   private createNewClientBasketWithRemove(oldClientBasket: BasketProduct[], removeProduct: Product): BasketProduct[] {
     oldClientBasket.find(product => {
-      if (product.getId() === removeProduct.getId()) {
+      if (this.sameProduct(product, removeProduct)) {
         product.removeOneProduct();
       }
     })
     return oldClientBasket;
   }
 
+  // check if in basket when don't exist product whit 0 number
   private checkEmptyProductBasket() {
     const newClientBasket = this.clientBasket.getValue().filter(basketProduct => basketProduct.getNumberProduct() > 0);
     this.clientBasket.next(newClientBasket);
