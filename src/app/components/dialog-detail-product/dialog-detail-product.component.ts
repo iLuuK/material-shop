@@ -16,7 +16,7 @@ export class DialogDetailProductComponent implements OnInit {
     public dialogRef: MatDialogRef<DialogDetailProductComponent>,
     private apiService: ApiService,
     private clientService: ClientService,
-    @Inject(MAT_DIALOG_DATA) private product: Product)
+    @Inject(MAT_DIALOG_DATA) public product: Product)
     {}
 
   onNoClick(): void {
