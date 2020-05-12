@@ -23,7 +23,7 @@ export class ProductFilterComponent implements OnInit {
   ngOnInit() {
     this.myForm.get('categories').valueChanges.subscribe(
       (categorie: string) => {
-        console.log(categorie);
+        // when change filter we change the type of data api
         this.apiService.getDataFromApi(categorie.toLowerCase());
       });
   }

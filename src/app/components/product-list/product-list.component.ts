@@ -3,7 +3,7 @@ import { ApiService } from 'src/app/services/api.service';
 import { Observable } from 'rxjs';
 import { Product } from 'src/app/class/product';
 import { ClientService } from 'src/app/services/client.service';
-import {MatDialog} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { DialogDetailProductComponent } from '../dialog-detail-product/dialog-detail-product.component';
 
 
@@ -20,7 +20,7 @@ export class ProductListComponent implements OnInit {
     this.subscribeToProductList();
   }
 
-  public subscribeToProductList(){
+  public subscribeToProductList() {
     this.productList$ = this.apiService.getProductList();
     this.productList$.subscribe();
   }
@@ -28,13 +28,14 @@ export class ProductListComponent implements OnInit {
   ngOnInit() {
 
   }
-
-  addBasket(newProduct: Product){
+  // ajout du pro
+  addBasket(newProduct: Product) {
     this.clientService.addProductBasket(newProduct);
+    // remove on product on stock
     this.apiService.productBuy(newProduct);
   }
 
-  checkCanBuy(product: Product){
+  checkCanBuy(product: Product) {
     return product.getStock() > 0 ? true : false;
   }
 

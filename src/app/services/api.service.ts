@@ -19,6 +19,7 @@ export class ApiService {
     console.log(this.urlApi);
     return this.urlApi;
   }
+  // get data from api with in param string of type when we want get
   public getDataFromApi(type: string = 'all') {
     this.http
       .get<Product[]>(this.getUrlService()).pipe()
@@ -40,6 +41,7 @@ export class ApiService {
   public getProductList(): Observable<Product[]> {
     return this.productList.asObservable();
   }
+  // remove one product of stock when product is in the basket
   public productBuy(productBuy: Product) {
     const oldProductList = this.productList.getValue();
     const newProductlist = oldProductList.map(product => {

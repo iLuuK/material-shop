@@ -19,11 +19,14 @@ export class DialogDetailProductComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public product: Product)
     {}
 
+  // when dialog close without buy product
   onNoClick(): void {
     this.dialogRef.close();
   }
+  // when buy product 
   addBasket(){
     this.clientService.addProductBasket(this.product);
+    // remove on product on stock
     this.apiService.productBuy(this.product);
     this.dialogRef.close();
   }
